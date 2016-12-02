@@ -27,35 +27,32 @@ numPlayers = 0
 playerPack = struct.Struct('cfff') #C struct object for handling network messages
 
 def clientHandler():
-    try:
-        while True:
-            #Lock player dictionary so main thread can't add new players
-            #with plDictLock:
-            for csock in clientSockets:
-                #Get client's new position
-                rawData = csock.recv(playerPack.size)
-                data = playerPack.unpack(rawData)
-                players[int(data[0])] = playerInfo(int(data[0]), data[1], data[2], data[3])
-                #print('Position Received:\n' + str(players[int(data[0])]))
+    while True:
+        #Lock player dictionary so main thread can't add new players
+        #with plDictLock:
+        for csock in clientSockets:
+            #Get client's new position
+            rawData = csock.recv(playerPack.size)
+            data = playerPack.unpack(rawData)
+            players[int(data[0])] = playerInfo(int(data[0]), data[1], data[2], data[3])
+            #print('Position Received:\n' + str(players[int(data[0])]))
 
-                #Send number of players
-                nPlayers = struct.pack('c', str(numPlayers).encode())
-                csock.sendall(nPlayers)
+            #Send number of players
+            nPlayers = struct.pack('c', str(numPlayers).encode())
+            csock.sendall(nPlayers)
 
-                #Check that client got message
-                clientOK = bool(struct.unpack('c',csock.recv(struct.calcsize('c'))))
-                if clientOK:
-                    bigMsg = b''
-                    for plKey in players:
-                        pl = players[plKey]
-                        tagVals = (str(pl.id).encode(), pl.x, pl.y, pl.z)
-                        tagData = playerPack.pack(*tagVals)
-                        bigMsg = bigMsg + tagData
-                    csock.sendall(bigMsg)
-                else:
-                    print('Something bad happened')
-    except KeyboardInterrupt:
-        sys.exit('Client handler exiting')
+            #Check that client got message
+            clientOK = bool(struct.unpack('c',csock.recv(struct.calcsize('c'))))
+            if clientOK:
+                bigMsg = b''
+                for plKey in players:
+                    pl = players[plKey]
+                    tagVals = (str(pl.id).encode(), pl.x, pl.y, pl.z)
+                    tagData = playerPack.pack(*tagVals)
+                    bigMsg = bigMsg + tagData
+                csock.sendall(bigMsg)
+            else:
+                print('Something bad happened')
 
 def serverMain():
     global numPlayers
@@ -92,5 +89,6 @@ def serverMain():
             numPlayers += 1
     except KeyboardInterrupt:
         sys.exit('Server terminating')
+        cHandle.exit()
 
 serverMain()
