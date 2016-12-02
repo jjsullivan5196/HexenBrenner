@@ -60,6 +60,7 @@ def serverMain():
     serversocket.bind(('', 27015)) #Bind to any host on port 27015 (game connections)
     serversocket.listen(5) #Listen for clients
     cHandle = threading.Thread(target=clientHandler)
+    cHandle.setDaemon(True)
     cHandle.start()
 
     print('Server running')
@@ -88,8 +89,6 @@ def serverMain():
             #Increment number of players
             numPlayers += 1
     except KeyboardInterrupt:
-        print('Server terminating')
-        cHandle.exit()
-        sys.exit()
+        sys.exit('Server terminating')
 
 serverMain()

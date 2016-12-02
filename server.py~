@@ -88,7 +88,8 @@ def serverMain():
             #Increment number of players
             numPlayers += 1
     except KeyboardInterrupt:
-        sys.exit('Server terminating')
+        print('Server terminating')
         cHandle.exit()
+        sys.exit()
 
 serverMain()
