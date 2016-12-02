@@ -61,6 +61,8 @@ def serverMain():
     serversocket.listen(5) #Listen for clients
     cHandle = threading.Thread(target=clientHandler)
     cHandle.start()
+
+    print('Server running')
     
     #Do stuff with incoming connections here
     while True:

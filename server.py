@@ -65,26 +65,29 @@ def serverMain():
     print('Server running')
     
     #Do stuff with incoming connections here
-    while True:
-        #New client has arrived
-        (clientsocket, address) = serversocket.accept()
-        print('Client has connected')
+    try:
+        while True:
+            #New client has arrived
+            (clientsocket, address) = serversocket.accept()
+            print('Client has connected')
 
-        #Make a new player object for them
-        newPlayer = playerInfo(numPlayers, 0.0, 0.0, 0.0)
+            #Make a new player object for them
+            newPlayer = playerInfo(numPlayers, 0.0, 0.0, 0.0)
 
-        #Add new player to players dictionary (Lock first)
-        #with plDictLock:
-        print('Adding player')
-        clientSockets.append(clientsocket)
-        players[newPlayer.id] = newPlayer
+            #Add new player to players dictionary (Lock first)
+            #with plDictLock:
+            print('Adding player')
+            clientSockets.append(clientsocket)
+            players[newPlayer.id] = newPlayer
 
-        tagVals = (str(newPlayer.id).encode(), newPlayer.x, newPlayer.y, newPlayer.z)
-        tagData = playerPack.pack(*tagVals)
-        clientsocket.sendall(tagData)
-        print('Player added')
+            tagVals = (str(newPlayer.id).encode(), newPlayer.x, newPlayer.y, newPlayer.z)
+            tagData = playerPack.pack(*tagVals)
+            clientsocket.sendall(tagData)
+            print('Player added')
 
-        #Increment number of players
-        numPlayers += 1
+            #Increment number of players
+            numPlayers += 1
+    except KeyboardInterrupt:
+        sys.exit('Server terminating')
 
 serverMain()
