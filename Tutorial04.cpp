@@ -690,8 +690,6 @@ void Render()
 		cb.mWorld = XMMatrixTranspose(g_World);
 		g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, NULL, &cb, 0, 0);
 		g_pImmediateContext->DrawIndexed(36, 0, 0);
-
-		p->alive = false;
 	}
 
 
