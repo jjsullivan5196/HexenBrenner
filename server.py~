@@ -36,7 +36,7 @@ def clientHandler():
                 #Get client's new position
                 rawData = csock.recv(playerPack.size)
                 data = playerPack.unpack(rawData)
-                players[int(data[0])] = playerInfo(int(data[0]), data[1], data[2], data[3])
+                players[int(data[0])] = playerInfo(int(data[0]), data[2], data[3], data[4])
                 #print('Position Received:\n' + str(players[int(data[0])]))
 
                 #Send number of players
