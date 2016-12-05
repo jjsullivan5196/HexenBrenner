@@ -1,9 +1,4 @@
-﻿  client.cpp
-c:\users\john sullivan\documents\tutorial04\client.cpp(53): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'sockaddr *'
-  player.cpp
-  server.cpp
-  socketsCommon.cpp
-  Tutorial04.cpp
+﻿  Tutorial04.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': macro redefinition
   c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50092): note: see previous definition of 'DXGI_STATUS_OCCLUDED'
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': macro redefinition
@@ -149,9 +144,13 @@ c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 
 c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 'cRepeat': unreferenced formal parameter
 c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 'fDown': unreferenced formal parameter
 c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 'hwnd': unreferenced formal parameter
+  client.cpp
+c:\users\john sullivan\documents\tutorial04\client.cpp(53): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'sockaddr *'
+  player.cpp
+  server.cpp
+  socketsCommon.cpp
   Generating Code...
 c:\users\john sullivan\documents\tutorial04\socketscommon.cpp(17): warning C4715: 'sendMsg': not all control paths return a value
 c:\users\john sullivan\documents\tutorial04\client.cpp(89): warning C4715: 'dropClient': not all control paths return a value
-client.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   Tutorial04_2010.vcxproj -> C:\Users\John Sullivan\Documents\Tutorial04\Debug\Tutorial04.exe
   Tutorial04_2010.vcxproj -> C:\Users\John Sullivan\Documents\Tutorial04\Debug\Tutorial04.pdb (Full PDB)

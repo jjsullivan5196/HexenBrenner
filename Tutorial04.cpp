@@ -680,11 +680,11 @@ void Render()
 	{
 		PlayerInfo* p = &i->second;
 
-		if (p->alive == false)
+		/*if (p->alive == false)
 		{
 			g_Players.erase(p->id);
 			continue;
-		}
+		}*/
 
 		g_World = XMMatrixIdentity() * XMMatrixTranslation(p->x, p->y, p->z);
 		cb.mWorld = XMMatrixTranspose(g_World);
