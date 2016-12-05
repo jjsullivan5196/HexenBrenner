@@ -1,4 +1,9 @@
-﻿  Tutorial04.cpp
+﻿  client.cpp
+c:\users\john sullivan\documents\tutorial04\client.cpp(53): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'sockaddr *'
+  player.cpp
+  server.cpp
+  socketsCommon.cpp
+  Tutorial04.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': macro redefinition
   c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50092): note: see previous definition of 'DXGI_STATUS_OCCLUDED'
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': macro redefinition
@@ -93,56 +98,60 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(23): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(23): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(240): note: see declaration of 'freopen'
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(24): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(24): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(240): note: see declaration of 'freopen'
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(25): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(25): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(240): note: see declaration of 'freopen'
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(86): warning C4100: 'lpParam': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(88): warning C4101: 'tPlayer': unreferenced local variable
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(144): warning C4189: 'argv': local variable is initialized but not referenced
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(476): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(86): warning C4100: 'lpParam': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(88): warning C4101: 'tPlayer': unreferenced local variable
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(144): warning C4189: 'argv': local variable is initialized but not referenced
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(476): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(479): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(479): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(512): warning C4100: 'keyFlags': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(512): warning C4100: 'y': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(512): warning C4100: 'x': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(512): warning C4100: 'fDoubleClick': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(512): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(519): warning C4100: 'keyFlags': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(519): warning C4100: 'y': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(519): warning C4100: 'x': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(519): warning C4100: 'fDoubleClick': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(519): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(526): warning C4100: 'cRepeat': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(526): warning C4100: 'ch': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(526): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(533): warning C4100: 'keyFlags': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(533): warning C4100: 'y': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(533): warning C4100: 'x': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(533): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(540): warning C4100: 'keyFlags': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(540): warning C4100: 'y': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(540): warning C4100: 'x': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(540): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(547): warning C4100: 'keyFlags': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(547): warning C4100: 'y': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(547): warning C4100: 'x': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(547): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(552): warning C4100: 'lpCreateStruct': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(552): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(556): warning C4100: 'id': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(556): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(566): warning C4065: switch statement contains 'default' but no 'case' labels
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(561): warning C4100: 'flags': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(561): warning C4100: 'cRepeat': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(561): warning C4100: 'fDown': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(561): warning C4100: 'hwnd': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(570): warning C4100: 'flags': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(570): warning C4100: 'cRepeat': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(570): warning C4100: 'fDown': unreferenced formal parameter
-c:\users\john sullivan\documents\visual studio projects\directxsamples\tutorial04\tutorial04.cpp(570): warning C4100: 'hwnd': unreferenced formal parameter
-  Tutorial04_2010.vcxproj -> C:\Users\John Sullivan\Documents\Visual Studio Projects\DirectXSamples\Tutorial04\Debug\Tutorial04.exe
-  Tutorial04_2010.vcxproj -> C:\Users\John Sullivan\Documents\Visual Studio Projects\DirectXSamples\Tutorial04\Debug\Tutorial04.pdb (Full PDB)
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(512): warning C4100: 'keyFlags': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(512): warning C4100: 'y': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(512): warning C4100: 'x': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(512): warning C4100: 'fDoubleClick': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(512): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(519): warning C4100: 'keyFlags': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(519): warning C4100: 'y': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(519): warning C4100: 'x': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(519): warning C4100: 'fDoubleClick': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(519): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(526): warning C4100: 'cRepeat': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(526): warning C4100: 'ch': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(526): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(533): warning C4100: 'keyFlags': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(533): warning C4100: 'y': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(533): warning C4100: 'x': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(533): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(540): warning C4100: 'keyFlags': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(540): warning C4100: 'y': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(540): warning C4100: 'x': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(540): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(547): warning C4100: 'keyFlags': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(547): warning C4100: 'y': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(547): warning C4100: 'x': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(547): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(552): warning C4100: 'lpCreateStruct': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(552): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(556): warning C4100: 'id': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(556): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(566): warning C4065: switch statement contains 'default' but no 'case' labels
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(561): warning C4100: 'flags': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(561): warning C4100: 'cRepeat': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(561): warning C4100: 'fDown': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(561): warning C4100: 'hwnd': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 'flags': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 'cRepeat': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 'fDown': unreferenced formal parameter
+c:\users\john sullivan\documents\tutorial04\tutorial04.cpp(570): warning C4100: 'hwnd': unreferenced formal parameter
+  Generating Code...
+c:\users\john sullivan\documents\tutorial04\socketscommon.cpp(17): warning C4715: 'sendMsg': not all control paths return a value
+c:\users\john sullivan\documents\tutorial04\client.cpp(89): warning C4715: 'dropClient': not all control paths return a value
+client.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Tutorial04_2010.vcxproj -> C:\Users\John Sullivan\Documents\Tutorial04\Debug\Tutorial04.exe
+  Tutorial04_2010.vcxproj -> C:\Users\John Sullivan\Documents\Tutorial04\Debug\Tutorial04.pdb (Full PDB)
