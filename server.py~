@@ -63,6 +63,8 @@ def clientHandler():
                     gameState.id = state
                     gameState.time = time.time() + 5
 
+                print('State received')
+
                 sendState = struct.pack('c', str(gameState.id).encode())
                 csock.sendall(sendState)
             except:
