@@ -24,7 +24,7 @@ clientSockets = []
 plDictLock = threading.Lock() #Lock for modifying/reading the player dictionary (Thread safety)
 numPlayers = 0
 
-playerPack = struct.Struct('cfff') #C struct object for handling network messages
+playerPack = struct.Struct('cfff?') #C struct object for handling network messages
 
 def clientHandler():
     while True:
@@ -49,7 +49,7 @@ def clientHandler():
                     bigMsg = b''
                     for plKey in players:
                         pl = players[plKey]
-                        tagVals = (str(pl.id).encode(), pl.x, pl.y, pl.z)
+                        tagVals = (str(pl.id).encode(), pl.x, pl.y, pl.z, True)
                         tagData = playerPack.pack(*tagVals)
                         bigMsg = bigMsg + tagData
                     csock.sendall(bigMsg)
@@ -86,7 +86,7 @@ def serverMain():
             clientSockets.append((clientsocket, newPlayer.id))
             players[newPlayer.id] = newPlayer
 
-            tagVals = (str(newPlayer.id).encode(), newPlayer.x, newPlayer.y, newPlayer.z)
+            tagVals = (str(newPlayer.id).encode(), newPlayer.x, newPlayer.y, newPlayer.z, True)
             tagData = playerPack.pack(*tagVals)
             clientsocket.sendall(tagData)
             print('Player added')

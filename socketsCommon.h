@@ -25,6 +25,7 @@ int receiveMessage(SOCKET ClientSocket, char* buffer, int buflen); //Receive a m
 typedef struct {
 	char id;
 	float x, y, z;
+	bool alive;
 } PlayerInfo;
 
 typedef struct {

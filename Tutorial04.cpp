@@ -679,10 +679,19 @@ void Render()
 	for (pIterator i = g_Players.begin(); i != g_Players.end(); i++)
 	{
 		PlayerInfo* p = &i->second;
+
+		if (p->alive == false)
+		{
+			g_Players.erase(p->id);
+			continue;
+		}
+
 		g_World = XMMatrixIdentity() * XMMatrixTranslation(p->x, p->y, p->z);
 		cb.mWorld = XMMatrixTranspose(g_World);
 		g_pImmediateContext->UpdateSubresource(g_pConstantBuffer, 0, NULL, &cb, 0, 0);
 		g_pImmediateContext->DrawIndexed(36, 0, 0);
+
+		p->alive = false;
 	}
 
 
