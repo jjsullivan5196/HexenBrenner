@@ -30,9 +30,10 @@ def clientHandler():
     while True:
         #Lock player dictionary so main thread can't add new players
         #with plDictLock:
-        for csock in clientSockets:
+        for cinfo in clientSockets:
             try:
                 #Get client's new position
+                csock = cinfo[0]
                 rawData = csock.recv(playerPack.size)
                 data = playerPack.unpack(rawData)
                 players[int(data[0])] = playerInfo(int(data[0]), data[1], data[2], data[3])
@@ -55,7 +56,7 @@ def clientHandler():
                 else:
                     print('Something bad happened')
             except:
-                del players[csock.id]
+                del players[cinfo[1]]
                 clientSockets.remove(csock)
 
 def serverMain():
@@ -78,12 +79,11 @@ def serverMain():
 
             #Make a new player object for them
             newPlayer = playerInfo(numPlayers, 0.0, 0.0, 0.0)
-            clientsocket.id = newPlayer.id
 
             #Add new player to players dictionary (Lock first)
             #with plDictLock:
             print('Adding player')
-            clientSockets.append(clientsocket)
+            clientSockets.append((clientsocket, newPlayer.id))
             players[newPlayer.id] = newPlayer
 
             tagVals = (str(newPlayer.id).encode(), newPlayer.x, newPlayer.y, newPlayer.z)

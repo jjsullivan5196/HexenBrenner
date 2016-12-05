@@ -57,7 +57,7 @@ def clientHandler():
                     print('Something bad happened')
             except:
                 del players[cinfo[1]]
-                clientSockets.remove(csock)
+                clientSockets.remove(cinfo)
 
 def serverMain():
     global numPlayers
