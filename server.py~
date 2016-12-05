@@ -1,3 +1,4 @@
+import time
 import socket
 import struct
 import threading
@@ -5,11 +6,6 @@ import sys
 
 #Class for player information
 class playerInfo:
-    id = 0
-    x = 0.0
-    y = 0.0
-    z = 0.0
-
     def __init__(self, id, x, y, z):
         self.id = id
         self.x = x
@@ -19,10 +15,16 @@ class playerInfo:
     def __str__(self):
         return 'Player: {}\nPos: ({},{},{})\n'.format(self.id, self.x, self.y, self.z)
 
+class currentState:
+    def __init__(self, id):
+        self.id = id
+        self.time = time.time()
+
 players = {} #Player dictionary: associative array of connected players
 clientSockets = []
 plDictLock = threading.Lock() #Lock for modifying/reading the player dictionary (Thread safety)
 numPlayers = 0
+witchTimer = 20
 
 playerPack = struct.Struct('ccfff') #C struct object for handling network messages
 
@@ -55,6 +57,14 @@ def clientHandler():
                     csock.sendall(bigMsg)
                 else:
                     print('Something bad happened')
+
+                state = int(struct.unpack('c', csock.recv(struct.calcsize('c'))))
+                if(gameState.time < time.time()):
+                    gameState.id = state
+                    gameState.time = time.time() + 5
+
+                sendState = struct.pack('c', str(gameState.id).encode())
+                csock.sendall(sendState)
             except:
                 del players[cinfo[1]]
                 clientSockets.remove(cinfo)
@@ -67,6 +77,7 @@ def serverMain():
     cHandle = threading.Thread(target=clientHandler)
     cHandle.setDaemon(True)
     cHandle.start()
+    gameState = currentState(0)
 
     print('Server running')
     
