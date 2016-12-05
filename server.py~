@@ -58,6 +58,8 @@ def clientHandler():
                 else:
                     print('Something bad happened')
 
+                print('Sent players')
+
                 state = int(struct.unpack('c', csock.recv(struct.calcsize('c'))))
                 if(gameState.time < time.time()):
                     gameState.id = state
