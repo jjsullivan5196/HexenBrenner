@@ -380,6 +380,7 @@
     <ClCompile Include="socketsCommon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\server.py" />
     <None Include="shader.fx" />
   </ItemGroup>
   <ItemGroup>

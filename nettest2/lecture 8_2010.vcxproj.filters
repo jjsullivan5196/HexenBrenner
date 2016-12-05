@@ -31,6 +31,7 @@
     <None Include="shader.fx">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="..\server.py" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="homework 8.rc">

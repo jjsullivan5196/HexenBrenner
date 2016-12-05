@@ -62,16 +62,6 @@ def clientHandler():
                     print('Something bad happened')
 
                 print('Sent players')
-
-                state = int(struct.unpack('c', csock.recv(struct.calcsize('c'))))
-                #if(gameState.time < time.time()):
-                #    gameState.id = state
-                #    gameState.time = time.time() + 5
-
-                print('State received')
-
-                sendState = struct.pack('c', str(gameState.id).encode())
-                csock.sendall(sendState)
             except:
                 del players[cinfo[1]]
                 clientSockets.remove(cinfo)
@@ -99,7 +89,6 @@ def serverMain():
             newPlayer = playerInfo(numPlayers, 0.0, 0.0, 0.0)
 
             #Add new player to players dictionary (Lock first)
-            #with plDictLock:
             print('Adding player')
             clientSockets.append((clientsocket, newPlayer.id))
             players[newPlayer.id] = newPlayer
