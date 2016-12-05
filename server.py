@@ -26,7 +26,7 @@ plDictLock = threading.Lock() #Lock for modifying/reading the player dictionary 
 numPlayers = 0
 witchTimer = 20
 
-playerPack = struct.Struct('ccfff') #C struct object for handling network messages
+playerPack = struct.Struct('BBfff') #C struct object for handling network messages
 
 def clientHandler():
     while True:
@@ -38,23 +38,23 @@ def clientHandler():
                 #Get client's new position
                 rawData = csock.recv(playerPack.size)
                 data = playerPack.unpack(rawData)
-                players[int(data[0])] = playerInfo(int(data[0]), data[2], data[3], data[4])
+                players[data[0]] = playerInfo(data[0], data[2], data[3], data[4])
                 #print('Position Received:\n' + str(players[int(data[0])]))
                 print('Position received')
 
                 #Send number of players
-                nPlayers = struct.pack('c', str(numPlayers).encode())
+                nPlayers = struct.pack('B', numPlayers)
                 csock.sendall(nPlayers)
 
                 print('Sent no. players')
 
                 #Check that client got message
-                clientOK = bool(struct.unpack('c',csock.recv(struct.calcsize('c'))))
+                clientOK = bool(struct.unpack('B',csock.recv(struct.calcsize('B'))))
                 if clientOK:
                     bigMsg = b''
                     for plKey in players:
                         pl = players[plKey]
-                        tagVals = (str(pl.id).encode(), str(1).encode(), pl.x, pl.y, pl.z)
+                        tagVals = (pl.id, 1, pl.x, pl.y, pl.z)
                         tagData = playerPack.pack(*tagVals)
                         bigMsg = bigMsg + tagData
                     csock.sendall(bigMsg)
@@ -93,7 +93,7 @@ def serverMain():
             clientSockets.append((clientsocket, newPlayer.id))
             players[newPlayer.id] = newPlayer
 
-            tagVals = (str(newPlayer.id).encode(), str(1).encode(), newPlayer.x, newPlayer.y, newPlayer.z)
+            tagVals = (newPlayer.id, 1, newPlayer.x, newPlayer.y, newPlayer.z)
             tagData = playerPack.pack(*tagVals)
             clientsocket.sendall(tagData)
             print('Player added')

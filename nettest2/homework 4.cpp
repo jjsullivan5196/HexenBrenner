@@ -65,7 +65,7 @@ XMFLOAT3							rocket_position;
 #define ROCKETRADIUS				10
 
 PlayerInfo g_Player = { 0, 0, 0.0, 0.0, 0.0 };
-GameState g_gameState = { 0 };
+GameState g_gameState = { 44 };
 std::map<char, PlayerInfo> g_Players;
 
 SOCKET g_listenSocket = INVALID_SOCKET;
@@ -99,16 +99,16 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 		sendMsg(g_clientSocket, g_netBuffer, sizeof(PlayerInfo));
 		fprintf(stdout, "Position Sent\n");
 
-		char numPlayers = 0;
-		char truth = 1;
+		unsigned char numPlayers = 0;
+		unsigned char truth = 1;
 		
-		receiveMessage(g_clientSocket, &numPlayers, sizeof(char));
+		receiveMessage(g_clientSocket, (char*)&numPlayers, sizeof(char));
 
 		if (numPlayers > 0)
 		{
 			PlayerInfo* newPlayers;
 			char* newPlayerBuf = (char*)malloc(sizeof(PlayerInfo) * numPlayers);
-			sendMsg(g_clientSocket, &truth, sizeof(char));
+			sendMsg(g_clientSocket, (char*)&truth, sizeof(char));
 			receiveMessage(g_clientSocket, newPlayerBuf, sizeof(PlayerInfo) * numPlayers);
 			newPlayers = (PlayerInfo*)newPlayerBuf;
 
@@ -1018,7 +1018,7 @@ UINT offset = 0;
     g_pImmediateContext->PSSetSamplers( 0, 1, &g_pSamplerLinear );
 
 	g_pImmediateContext->OMSetDepthStencilState(ds_off, 1);
-    g_pImmediateContext->Draw( 12, 0 );
+    //g_pImmediateContext->Draw( 12, 0 );
 
 	//draw all billboards:
 
@@ -1040,12 +1040,14 @@ UINT offset = 0;
 		}*/
 	for (auto i = players.begin(); i != players.end(); i++)
 	{
+		if (i->first == g_Player.id)
+			continue;
 		ConstantBuffer constantbuffer;
 		render_billboard(i->second, view, worldmatrix, constantbuffer, g_pImmediateContext);
-		if (i->first == g_gameState.whoLit)
+		/*if (i->first == g_gameState.whoLit)
 		{
 			render_billboard(&fire, view, worldmatrix, constantbuffer, g_pImmediateContext);
-		}
+		}*/
 	}
 
 

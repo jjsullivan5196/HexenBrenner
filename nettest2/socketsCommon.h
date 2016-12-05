@@ -22,8 +22,7 @@ int sendMsg(SOCKET ClientSocket, char* buffer, int buflen); //Send a message
 int receiveMessage(SOCKET ClientSocket, char* buffer, int buflen); //Receive a message
 
 typedef struct {
-	char id;
-	char alive;
+	unsigned char id, alive;
 	float x, y, z;
 } PlayerInfo;
 
@@ -33,7 +32,7 @@ typedef struct {
 } clientInfo;
 
 typedef struct {
-	char whoLit;
+	unsigned char whoLit;
 } GameState;
 
 void printPlayer(PlayerInfo *p);

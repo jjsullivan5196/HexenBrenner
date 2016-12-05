@@ -1,4 +1,6 @@
-﻿  homework 4.cpp
+﻿  client.cpp
+e:\users\jahn\burnawitch\nettest2\client.cpp(53): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'sockaddr *'
+  homework 4.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': macro redefinition
   c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50092): note: see previous definition of 'DXGI_STATUS_OCCLUDED'
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': macro redefinition
@@ -114,53 +116,59 @@ e:\users\jahn\burnawitch\nettest2\homework 4.cpp(22): warning C4996: 'freopen': 
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(240): note: see declaration of 'freopen'
 e:\users\jahn\burnawitch\nettest2\homework 4.cpp(87): warning C4100: 'lpParam': unreferenced formal parameter
 e:\users\jahn\burnawitch\nettest2\homework 4.cpp(89): warning C4101: 'tPlayer': unreferenced local variable
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(159): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(662): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(146): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(649): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(665): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(652): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(700): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(700): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(700): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(700): warning C4100: 'fDoubleClick': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(700): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(707): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(707): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(707): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(707): warning C4100: 'fDoubleClick': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(707): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(714): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(714): warning C4100: 'ch': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(714): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(721): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(721): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(721): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(721): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(729): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(729): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(729): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(729): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(737): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(737): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(687): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(687): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(687): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(687): warning C4100: 'fDoubleClick': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(687): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(694): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(694): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(694): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(694): warning C4100: 'fDoubleClick': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(694): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(701): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(701): warning C4100: 'ch': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(701): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(708): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(708): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(708): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(708): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(716): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(716): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(716): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(716): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(724): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(724): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(724): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(737): warning C4100: 'lpCreateStruct': unreferenced formal parameter
 e:\users\jahn\burnawitch\nettest2\homework 4.cpp(737): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(750): warning C4100: 'lpCreateStruct': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(750): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(755): warning C4100: 'id': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(755): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(760): warning C4100: 'flags': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(760): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(760): warning C4100: 'fDown': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(760): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(779): warning C4100: 'flags': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(779): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(779): warning C4100: 'fDown': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(779): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(882): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(890): warning C4018: '<': signed/unsigned mismatch
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(909): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(979): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(996): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
-e:\users\jahn\burnawitch\nettest2\homework 4.cpp(1056): warning C4456: declaration of 'constantbuffer' hides previous local declaration
-  e:\users\jahn\burnawitch\nettest2\homework 4.cpp(1019): note: see declaration of 'constantbuffer'
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(742): warning C4100: 'id': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(742): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(747): warning C4100: 'flags': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(747): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(747): warning C4100: 'fDown': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(747): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(766): warning C4100: 'flags': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(766): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(766): warning C4100: 'fDown': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(766): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(869): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(877): warning C4018: '<': signed/unsigned mismatch
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(896): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(966): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(983): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
+e:\users\jahn\burnawitch\nettest2\homework 4.cpp(1045): warning C4456: declaration of 'constantbuffer' hides previous local declaration
+  e:\users\jahn\burnawitch\nettest2\homework 4.cpp(1006): note: see declaration of 'constantbuffer'
+  player.cpp
+  server.cpp
+  socketsCommon.cpp
+  Generating Code...
+e:\users\jahn\burnawitch\nettest2\socketscommon.cpp(17): warning C4715: 'sendMsg': not all control paths return a value
+e:\users\jahn\burnawitch\nettest2\client.cpp(89): warning C4715: 'dropClient': not all control paths return a value
   lecture 8_2010.vcxproj -> E:\Users\Jahn\BurnAWitch\nettest2\Debug\homework 4.exe
   lecture 8_2010.vcxproj -> E:\Users\Jahn\BurnAWitch\nettest2\Debug\homework 4.pdb (Full PDB)
