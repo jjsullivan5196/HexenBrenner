@@ -64,9 +64,9 @@ def clientHandler():
                 print('Sent players')
 
                 state = int(struct.unpack('c', csock.recv(struct.calcsize('c'))))
-                if(gameState.time < time.time()):
-                    gameState.id = state
-                    gameState.time = time.time() + 5
+                #if(gameState.time < time.time()):
+                #    gameState.id = state
+                #    gameState.time = time.time() + 5
 
                 print('State received')
 

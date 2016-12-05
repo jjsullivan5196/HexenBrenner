@@ -40,10 +40,13 @@ def clientHandler():
                 data = playerPack.unpack(rawData)
                 players[int(data[0])] = playerInfo(int(data[0]), data[2], data[3], data[4])
                 #print('Position Received:\n' + str(players[int(data[0])]))
+                print('Position received')
 
                 #Send number of players
                 nPlayers = struct.pack('c', str(numPlayers).encode())
                 csock.sendall(nPlayers)
+
+                print('Sent no. players')
 
                 #Check that client got message
                 clientOK = bool(struct.unpack('c',csock.recv(struct.calcsize('c'))))
