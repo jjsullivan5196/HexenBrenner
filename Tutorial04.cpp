@@ -14,6 +14,7 @@
 #include "resource.h"
 
 #include <map>
+#include <vector>
 
 typedef std::map<char, PlayerInfo>::iterator pIterator;
 
@@ -119,6 +120,7 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 			for (int i = 0; i < numPlayers; i++)
 			{
 				PlayerInfo* c = &newPlayers[i];
+				c->alive = true;
 				g_Players[c->id] = *c;
 			}
 
@@ -676,15 +678,10 @@ void Render()
 	//
 	// Render everybody else
 	//
+
 	for (pIterator i = g_Players.begin(); i != g_Players.end(); i++)
 	{
 		PlayerInfo* p = &i->second;
-
-		/*if (p->alive == false)
-		{
-			g_Players.erase(p->id);
-			continue;
-		}*/
 
 		g_World = XMMatrixIdentity() * XMMatrixTranslation(p->x, p->y, p->z);
 		cb.mWorld = XMMatrixTranspose(g_World);
