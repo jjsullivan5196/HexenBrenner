@@ -39,7 +39,7 @@ def clientHandler():
                 rawData = csock.recv(playerPack.size)
                 data = playerPack.unpack(rawData)
                 players[data[0]] = playerInfo(data[0], data[2], data[3], data[4])
-				gameState.id = data[1]
+                gameState.id = data[1]
                 #print('Position Received:\n' + str(players[int(data[0])]))
                 print('Position received')
 
