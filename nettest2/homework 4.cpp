@@ -126,9 +126,6 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 		{
 			fprintf(stderr, "No clients\n");
 		}
-
-		//sendMsg(g_clientSocket, (char*)&g_gameState.whoLit, sizeof(char));
-		//receiveMessage(g_clientSocket, (char*)&g_gameState.whoLit, sizeof(char));
 	}
 }
 //--------------------------------------------------------------------------------------

@@ -22,7 +22,7 @@ int sendMsg(SOCKET ClientSocket, char* buffer, int buflen); //Send a message
 int receiveMessage(SOCKET ClientSocket, char* buffer, int buflen); //Receive a message
 
 typedef struct {
-	unsigned char id, alive;
+	unsigned char id, whoLit;
 	float x, y, z;
 } PlayerInfo;
 

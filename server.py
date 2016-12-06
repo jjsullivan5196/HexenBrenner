@@ -34,11 +34,12 @@ def clientHandler():
         #with plDictLock:
         for cinfo in clientSockets:
             try:
-                csock = cinfo[0]
+                csock = cinfo[0] 
                 #Get client's new position
                 rawData = csock.recv(playerPack.size)
                 data = playerPack.unpack(rawData)
                 players[data[0]] = playerInfo(data[0], data[2], data[3], data[4])
+				gameState.id = data[1]
                 #print('Position Received:\n' + str(players[int(data[0])]))
                 print('Position received')
 
@@ -54,7 +55,7 @@ def clientHandler():
                     bigMsg = b''
                     for plKey in players:
                         pl = players[plKey]
-                        tagVals = (pl.id, 1, pl.x, pl.y, pl.z)
+                        tagVals = (pl.id, gameState.id, pl.x, pl.y, pl.z)
                         tagData = playerPack.pack(*tagVals)
                         bigMsg = bigMsg + tagData
                     csock.sendall(bigMsg)
@@ -62,10 +63,6 @@ def clientHandler():
                     print('Something bad happened')
 
                 print('Sent players')
-
-				#state = int(struct.unpack('B',csock.recv(struct.calcsize('B'))))
-				#sendState = struct.pack('B', state)
-                #csock.sendall(sendState)
 
             except:
                 del players[cinfo[1]]
@@ -98,7 +95,7 @@ def serverMain():
             clientSockets.append((clientsocket, newPlayer.id))
             players[newPlayer.id] = newPlayer
 
-            tagVals = (newPlayer.id, 1, newPlayer.x, newPlayer.y, newPlayer.z)
+            tagVals = (newPlayer.id, 0, newPlayer.x, newPlayer.y, newPlayer.z)
             tagData = playerPack.pack(*tagVals)
             clientsocket.sendall(tagData)
             print('Player added')
