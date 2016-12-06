@@ -63,11 +63,10 @@ def clientHandler():
 
                 print('Sent players')
 
-				'''
-				state = int(struct.unpack('B',csock.recv(struct.calcsize('B'))))
-				sendState = struct.pack('B', state)
-                csock.sendall(sendState)
-				'''
+				#state = int(struct.unpack('B',csock.recv(struct.calcsize('B'))))
+				#sendState = struct.pack('B', state)
+                #csock.sendall(sendState)
+
             except:
                 del players[cinfo[1]]
                 clientSockets.remove(cinfo)
