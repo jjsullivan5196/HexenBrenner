@@ -65,7 +65,7 @@ XMFLOAT3							rocket_position;
 #define ROCKETRADIUS				10
 
 PlayerInfo g_Player = { 0, 0, 0.0, 0.0, 0.0 };
-GameState g_gameState = { 44 };
+GameState g_gameState = { 0 };
 std::map<char, PlayerInfo> g_Players;
 
 SOCKET g_listenSocket = INVALID_SOCKET;
@@ -97,7 +97,7 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 		//Send my location
 		memcpy(g_netBuffer, &g_Player, sizeof(PlayerInfo));
 		sendMsg(g_clientSocket, g_netBuffer, sizeof(PlayerInfo));
-		fprintf(stdout, "Position Sent\n");
+		//fprintf(stdout, "Position Sent\n");
 
 		unsigned char numPlayers = 0;
 		unsigned char truth = 1;
@@ -116,6 +116,8 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 			{
 				PlayerInfo* c = &newPlayers[i];
 				g_Players[c->id] = *c;
+				if(c->id != g_Player.id)
+					fprintf(stdout, "Player %d: %.2f %.2f %.2f\n", c->id, c->x, c->y, c->z);
 			}
 
 			free(newPlayerBuf);
@@ -124,6 +126,9 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 		{
 			fprintf(stderr, "No clients\n");
 		}
+
+		//sendMsg(g_clientSocket, (char*)&g_gameState.whoLit, sizeof(char));
+		//receiveMessage(g_clientSocket, (char*)&g_gameState.whoLit, sizeof(char));
 	}
 }
 //--------------------------------------------------------------------------------------
@@ -552,7 +557,7 @@ HRESULT InitDevice()
     
 
     // Load the Texture
-    hr = D3DX11CreateShaderResourceViewFromFile( g_pd3dDevice, L"smoke.dds", NULL, NULL, &g_pTextureRV, NULL );
+    hr = D3DX11CreateShaderResourceViewFromFile( g_pd3dDevice, L"playa1.gif", NULL, NULL, &g_pTextureRV, NULL );
     if( FAILED( hr ) )
         return hr;
 
@@ -915,6 +920,8 @@ void animate_players()
 	for (pIterator i = g_Players.begin(); i != g_Players.end(); i++)
 	{
 		PlayerInfo* p = &i->second;
+		if (p->id == g_Player.id)
+			continue;
 		if (players.count(p->id))
 		{
 			players[p->id]->position = XMFLOAT3(p->x, p->y, p->z);
@@ -924,25 +931,6 @@ void animate_players()
 			players[p->id] = new billboard();
 			players[p->id]->position = XMFLOAT3(p->x, p->y, p->z);
 			players[p->id]->scale = 1;
-		}
-
-		if (g_gameState.whoLit == p->id)
-		{
-			animate_fire(XMFLOAT3(p->x, p->y, p->z));
-		}
-		else
-		{
-			PlayerInfo* fGuy = &g_Players[g_gameState.whoLit];
-			PlayerInfo* other = p;
-
-			XMFLOAT3 fPos = XMFLOAT3(fGuy->x, fGuy->y, fGuy->z);
-			XMFLOAT3 otherPos = XMFLOAT3(other->x, other->y, other->z);
-			float dist = vecDist(fPos, otherPos);
-
-			if (dist < 1)
-			{
-				g_gameState.whoLit = other->id;
-			}
 		}
 	}
 }
@@ -1040,14 +1028,8 @@ UINT offset = 0;
 		}*/
 	for (auto i = players.begin(); i != players.end(); i++)
 	{
-		if (i->first == g_Player.id)
-			continue;
 		ConstantBuffer constantbuffer;
 		render_billboard(i->second, view, worldmatrix, constantbuffer, g_pImmediateContext);
-		/*if (i->first == g_gameState.whoLit)
-		{
-			render_billboard(&fire, view, worldmatrix, constantbuffer, g_pImmediateContext);
-		}*/
 	}
 
 

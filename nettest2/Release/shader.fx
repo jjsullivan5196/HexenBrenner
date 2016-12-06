@@ -60,11 +60,5 @@ float4 PS( PS_INPUT input) : SV_Target
 	//depth = pow(depth,0.97);
 	//color = depth;// (depth*0.9 + 0.02);
 	color.a *=info.x;
-
-	if (color.r == 0 && color.g == 1 && color.b == 1)
-	{
-		color.a = 0;
-	}
-
 	return color;
 }
