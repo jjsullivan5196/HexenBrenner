@@ -43,17 +43,43 @@ class GameHandler(RpcHandler):
     HEAD_CONNECT = 1
     HEAD_GETSTATE = 2
     HEAD_GETPLAYERS = 3
+    HEAD_PUSHPLAYER = 4
 
     def __init__(self):
         super(GameHandler, self)
         self.state = GameState()
         self.players = {}
 
+    def handleRemoteBytes(self, data, header):
+        data = None
+        size = 
+
+        if(header == HEAD_CONNECT):
+            id = self.state.numPlayers
+            newPlayer = Player(id, 0, 0, 0)
+            self.players[id] = newPlayer
+            self.state.numPlayers += 1
+
+            data = newPlayer.pack()
+            size = newPlayer.size()
+        elif(header == HEAD_GETSTATE):
+
+        elif(header == HEAD_GETPLAYERS):
+
+        elif(header == HEAD_PUSHPLAYER):
+
+        else:
+            
+        return (data, size)
+
 class NetObject: #Interface for network objects
     netPack = struct.Struct('B')
 
     def __init__(self, byte)
         self.byte = byte
+
+    def size(self):
+        return type(self).netPack.size
 
     def unpack(self, obj):
         childClass = type(self)
