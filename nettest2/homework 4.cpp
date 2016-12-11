@@ -65,7 +65,7 @@ XMFLOAT3							rocket_position;
 #define ROCKETRADIUS				10
 
 PlayerInfo g_Player = { 0, 0, 0.0, 0.0, 0.0 };
-GameState g_gameState = { 0 };
+GameState g_gameState = { 0, 0, 0, 0 };
 std::map<char, PlayerInfo> g_Players;
 
 SOCKET g_listenSocket = INVALID_SOCKET;
@@ -89,14 +89,12 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 	PlayerInfo tPlayer;
 
 	// Just Connected
-	receiveMessage(g_clientSocket, g_netBuffer, sizeof(PlayerInfo));
-	memcpy(&g_Player, g_netBuffer, sizeof(PlayerInfo));
+	receiveMessage(g_clientSocket, (char*)&g_Player, sizeof(PlayerInfo));
 
 	while (true)
 	{
 		//Send my location
-		memcpy(g_netBuffer, &g_Player, sizeof(PlayerInfo));
-		sendMsg(g_clientSocket, g_netBuffer, sizeof(PlayerInfo));
+		sendMsg(g_clientSocket, (char*)&g_Player, sizeof(PlayerInfo));
 		//fprintf(stdout, "Position Sent\n");
 
 		unsigned char numPlayers = 0;

@@ -1,6 +1,4 @@
-﻿  client.cpp
-client.cpp(53): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'sockaddr *'
-  homework 4.cpp
+﻿  homework 4.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': macro redefinition
   C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winerror.h(50092): note: see previous definition of 'DXGI_STATUS_OCCLUDED'
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': macro redefinition
@@ -115,59 +113,56 @@ homework 4.cpp(22): warning C4996: 'freopen': This function or variable may be u
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(240): note: see declaration of 'freopen'
 homework 4.cpp(87): warning C4100: 'lpParam': unreferenced formal parameter
 homework 4.cpp(89): warning C4101: 'tPlayer': unreferenced local variable
-homework 4.cpp(148): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-homework 4.cpp(651): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+homework 4.cpp(146): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+homework 4.cpp(649): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-homework 4.cpp(654): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+homework 4.cpp(652): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
-homework 4.cpp(689): warning C4100: 'keyFlags': unreferenced formal parameter
-homework 4.cpp(689): warning C4100: 'y': unreferenced formal parameter
-homework 4.cpp(689): warning C4100: 'x': unreferenced formal parameter
-homework 4.cpp(689): warning C4100: 'fDoubleClick': unreferenced formal parameter
-homework 4.cpp(689): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(696): warning C4100: 'keyFlags': unreferenced formal parameter
-homework 4.cpp(696): warning C4100: 'y': unreferenced formal parameter
-homework 4.cpp(696): warning C4100: 'x': unreferenced formal parameter
-homework 4.cpp(696): warning C4100: 'fDoubleClick': unreferenced formal parameter
-homework 4.cpp(696): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(703): warning C4100: 'cRepeat': unreferenced formal parameter
-homework 4.cpp(703): warning C4100: 'ch': unreferenced formal parameter
-homework 4.cpp(703): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(710): warning C4100: 'keyFlags': unreferenced formal parameter
-homework 4.cpp(710): warning C4100: 'y': unreferenced formal parameter
-homework 4.cpp(710): warning C4100: 'x': unreferenced formal parameter
-homework 4.cpp(710): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(718): warning C4100: 'keyFlags': unreferenced formal parameter
-homework 4.cpp(718): warning C4100: 'y': unreferenced formal parameter
-homework 4.cpp(718): warning C4100: 'x': unreferenced formal parameter
-homework 4.cpp(718): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(726): warning C4100: 'y': unreferenced formal parameter
-homework 4.cpp(726): warning C4100: 'x': unreferenced formal parameter
-homework 4.cpp(726): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(739): warning C4100: 'lpCreateStruct': unreferenced formal parameter
-homework 4.cpp(739): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(744): warning C4100: 'id': unreferenced formal parameter
-homework 4.cpp(744): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(749): warning C4100: 'flags': unreferenced formal parameter
-homework 4.cpp(749): warning C4100: 'cRepeat': unreferenced formal parameter
-homework 4.cpp(749): warning C4100: 'fDown': unreferenced formal parameter
-homework 4.cpp(749): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(768): warning C4100: 'flags': unreferenced formal parameter
-homework 4.cpp(768): warning C4100: 'cRepeat': unreferenced formal parameter
-homework 4.cpp(768): warning C4100: 'fDown': unreferenced formal parameter
-homework 4.cpp(768): warning C4100: 'hwnd': unreferenced formal parameter
-homework 4.cpp(871): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-homework 4.cpp(879): warning C4018: '<': signed/unsigned mismatch
-homework 4.cpp(898): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-homework 4.cpp(951): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
-homework 4.cpp(968): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
-homework 4.cpp(1028): warning C4456: declaration of 'constantbuffer' hides previous local declaration
-  homework 4.cpp(991): note: see declaration of 'constantbuffer'
-  player.cpp
-  server.cpp
-  socketsCommon.cpp
+homework 4.cpp(687): warning C4100: 'keyFlags': unreferenced formal parameter
+homework 4.cpp(687): warning C4100: 'y': unreferenced formal parameter
+homework 4.cpp(687): warning C4100: 'x': unreferenced formal parameter
+homework 4.cpp(687): warning C4100: 'fDoubleClick': unreferenced formal parameter
+homework 4.cpp(687): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(694): warning C4100: 'keyFlags': unreferenced formal parameter
+homework 4.cpp(694): warning C4100: 'y': unreferenced formal parameter
+homework 4.cpp(694): warning C4100: 'x': unreferenced formal parameter
+homework 4.cpp(694): warning C4100: 'fDoubleClick': unreferenced formal parameter
+homework 4.cpp(694): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(701): warning C4100: 'cRepeat': unreferenced formal parameter
+homework 4.cpp(701): warning C4100: 'ch': unreferenced formal parameter
+homework 4.cpp(701): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(708): warning C4100: 'keyFlags': unreferenced formal parameter
+homework 4.cpp(708): warning C4100: 'y': unreferenced formal parameter
+homework 4.cpp(708): warning C4100: 'x': unreferenced formal parameter
+homework 4.cpp(708): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(716): warning C4100: 'keyFlags': unreferenced formal parameter
+homework 4.cpp(716): warning C4100: 'y': unreferenced formal parameter
+homework 4.cpp(716): warning C4100: 'x': unreferenced formal parameter
+homework 4.cpp(716): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(724): warning C4100: 'y': unreferenced formal parameter
+homework 4.cpp(724): warning C4100: 'x': unreferenced formal parameter
+homework 4.cpp(724): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(737): warning C4100: 'lpCreateStruct': unreferenced formal parameter
+homework 4.cpp(737): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(742): warning C4100: 'id': unreferenced formal parameter
+homework 4.cpp(742): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(747): warning C4100: 'flags': unreferenced formal parameter
+homework 4.cpp(747): warning C4100: 'cRepeat': unreferenced formal parameter
+homework 4.cpp(747): warning C4100: 'fDown': unreferenced formal parameter
+homework 4.cpp(747): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(766): warning C4100: 'flags': unreferenced formal parameter
+homework 4.cpp(766): warning C4100: 'cRepeat': unreferenced formal parameter
+homework 4.cpp(766): warning C4100: 'fDown': unreferenced formal parameter
+homework 4.cpp(766): warning C4100: 'hwnd': unreferenced formal parameter
+homework 4.cpp(869): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+homework 4.cpp(877): warning C4018: '<': signed/unsigned mismatch
+homework 4.cpp(896): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+homework 4.cpp(949): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
+homework 4.cpp(966): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
+homework 4.cpp(1026): warning C4456: declaration of 'constantbuffer' hides previous local declaration
+  homework 4.cpp(989): note: see declaration of 'constantbuffer'
   Generating code
-  1 of 668 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+  2 of 668 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

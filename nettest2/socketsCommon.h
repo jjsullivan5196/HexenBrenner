@@ -32,7 +32,8 @@ typedef struct {
 } clientInfo;
 
 typedef struct {
-	unsigned char whoLit;
+	unsigned char numPlayers, whoLit, timeToDie;
+	int roundTime;
 } GameState;
 
 void printPlayer(PlayerInfo *p);

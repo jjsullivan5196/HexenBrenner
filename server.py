@@ -4,10 +4,16 @@ import struct
 import threading
 import sys
 
+
+pStruct = struct.Struct('BBBfff')
+stateStruct = struct.Struct('BBBI')
+
 #Class for player information
 class playerInfo:
     def __init__(self, id, x, y, z):
         self.id = id
+        self.alive = True
+        self.touch = id
         self.x = x
         self.y = y
         self.z = z
@@ -15,18 +21,26 @@ class playerInfo:
     def __str__(self):
         return 'Player: {}\nPos: ({},{},{})\n'.format(self.id, self.x, self.y, self.z)
 
+    def pack(self):
+        return pStruct.pack((self.id, self.alive, self.touch, self.x, self.y, self.z))
+
+    def unpack(data):
+        self.id = data[0]
+        self.alive = data[1]
+        self.touch = data[2]
+        self.x = data[3]
+        self.y = data[4]
+        self.z = data[5]
+
 class currentState:
-    def __init__(self, id):
-        self.id = id
-        self.time = time.time()
+    def __init__(self):
+        self.time = 0
+        self.lit = 0
+        self.dTime = 0
+        self.numPlayers = 0
 
 players = {} #Player dictionary: associative array of connected players
 clientSockets = []
-plDictLock = threading.Lock() #Lock for modifying/reading the player dictionary (Thread safety)
-numPlayers = 0
-witchTimer = 20
-
-playerPack = struct.Struct('BBfff') #C struct object for handling network messages
 
 def clientHandler():
     while True:
@@ -34,7 +48,7 @@ def clientHandler():
         #with plDictLock:
         for cinfo in clientSockets:
             try:
-                csock = cinfo[0] 
+                csock = cinfo[0]
                 #Get client's new position
                 rawData = csock.recv(playerPack.size)
                 data = playerPack.unpack(rawData)
