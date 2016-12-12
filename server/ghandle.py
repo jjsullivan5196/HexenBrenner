@@ -11,6 +11,7 @@ class GameHandler(RpcHandler):
     HEAD_GETPLAYERS = 3
     HEAD_PUSHPLAYER = 4
     TIME_RESET = 10
+    TIME_LOBBY = 20
 
     def __init__(self):
         super().__init__()
@@ -37,7 +38,13 @@ class GameHandler(RpcHandler):
             if(self.state.numPlayers < 2):
                 return
             else:
-                self.state.mode = GameState.MODE_RUN
+                if(self.state.cooldown == None):
+                    self.state.cooldown = time.time() + GameHandler.TIME_LOBBY
+                elif(time.time() > self.state.cooldown):
+                    self.state.cooldown = time.time() + 5
+                    self.state.gametimer = time.time() + GameHandler.TIME_RESET
+                    self.state.mode = GameState.MODE_RUN
+
 
         if(self.state.mode == GameState.MODE_OVER):
             return
@@ -142,8 +149,8 @@ class GameState(NetObject):
         self.mode = GameState.MODE_LOBBY
         self.fire_id = 0
         self.timer = 0
-        self.gametimer = time.time() + 20
-        self.cooldown = 0
+        self.gametimer = None
+        self.cooldown = None
 
     def packValues(self):
         return (self.numPlayers, self.playersAlive, self.mode, self.fire_id, int(self.timer))
