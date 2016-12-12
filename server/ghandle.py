@@ -62,6 +62,8 @@ class GameHandler(RpcHandler):
             return
 
         if(self.state.numPlayers == 0):
+            self.state.cooldown = time.time() + 5
+            self.state.gametimer = time.time() + GameHandler.TIME_RESET
             return
 
         if(self.state.playersAlive <= 1):
