@@ -37,12 +37,7 @@ class GameHandler(RpcHandler):
             if(self.state.numPlayers < 2):
                 return
             else:
-                if(self.state.cooldown == 0):
-                    self.state.cooldown = time.time() + 20
-                else:
-                    if(time.time() > self.state.cooldown):
-                        self.state.cooldown = time.time() + 5
-                        self.state.mode = GameState.MODE_RUN
+                self.state.mode = GameState.MODE_RUN
 
         if(self.state.mode == GameState.MODE_OVER):
             return
