@@ -400,6 +400,7 @@ class level
 
 	public:
 		int w, s, a, d;
+		float speedRatio = 100000.0;
 		XMFLOAT3 position;
 		XMFLOAT3 rotation;
 		camera()
@@ -422,7 +423,7 @@ class level
 			si = XMVector3TransformCoord(si, R);
 			XMStoreFloat3(&side, si);
 
-			float speed = elapsed_microseconds / 100000.0;
+			float speed = elapsed_microseconds / speedRatio;
 
 			if (w)
 			{

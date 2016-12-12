@@ -835,6 +835,15 @@ UINT offset = 0;
     // Clear the depth buffer to 1.0 (max depth)
     g_pImmediateContext->ClearDepthStencilView( g_pDepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0 );
 
+	if (g_gameState.fire_id == g_Player.id && g_gameState.mode == MODE_RUN)
+	{
+		cam.speedRatio = 50000.0;
+	}
+	else
+	{
+		cam.speedRatio = 100000.0;
+	}
+
 	cam.animation(elapsed, &g_Player);
 	XMMATRIX view = cam.get_matrix(&g_View);
 
@@ -907,13 +916,20 @@ UINT offset = 0;
 	switch(g_gameState.mode)
 	{
 		case MODE_LOBBY:
-			sprintf(buf, "WAITING FOR PLAYERS");
+			sprintf(buf, "WAITING FOR PLAYERS\n");
 			break;
 		case MODE_RUN:
-			sprintf(buf, "NEXT KILL: %d", g_gameState.timer);
+			if (g_Player.alive)
+			{
+				sprintf(buf, "NEXT KILL: %d\n%s\n", g_gameState.timer, (g_gameState.fire_id == g_Player.id ? "YOU ARE ON FIRE!" : ""));
+			}
+			else
+			{
+				sprintf(buf, "YOU ARE DEAD!\n");
+			}
 			break;
 		case MODE_OVER:
-			sprintf(buf, "PLAYER %d WINS!", g_gameState.fire_id);
+			sprintf(buf, "PLAYER %d WINS!\n", g_gameState.fire_id);
 			break;
 	}
 

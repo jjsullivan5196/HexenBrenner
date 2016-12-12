@@ -10,6 +10,7 @@ class GameHandler(RpcHandler):
     HEAD_GETSTATE = 2
     HEAD_GETPLAYERS = 3
     HEAD_PUSHPLAYER = 4
+    TIME_RESET = 10
 
     def __init__(self):
         super().__init__()
@@ -64,7 +65,7 @@ class GameHandler(RpcHandler):
             if(mPlayer.dist(*nPlayer.pos()) < 2 and time.time() > self.state.cooldown):
                 self.state.fire_id = nKey
                 self.state.cooldown = time.time() + 5
-                self.state.gametimer = time.time() + 20
+                self.state.gametimer = time.time() + GameHanlder.TIME_RESET
                 print('Player ' + str(nKey) + ' is on fire!')
                 break
 
@@ -79,7 +80,7 @@ class GameHandler(RpcHandler):
             self.state.fire_id = nextVictim
 
             print('Player ' + str(self.state.fire_id) + ' is on fire!')
-            self.state.gametimer = time.time() + 20
+            self.state.gametimer = time.time() + GameHandler.TIME_RESET
 
         self.state.timer = self.state.gametimer - time.time()
 
