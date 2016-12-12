@@ -20,6 +20,7 @@
     <ClCompile Include="player.cpp" />
     <ClCompile Include="server.cpp" />
     <ClCompile Include="socketsCommon.cpp" />
+    <ClCompile Include="Font.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -27,6 +28,7 @@
     </CLInclude>
     <ClInclude Include="groundwork.h" />
     <ClInclude Include="socketsCommon.h" />
+    <ClInclude Include="Font.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader.fx">

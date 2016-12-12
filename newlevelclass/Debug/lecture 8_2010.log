@@ -109,47 +109,49 @@ e:\users\jahn\burnawitch\newlevelclass\groundwork.h(302): warning C4100: 'view':
 e:\users\jahn\burnawitch\newlevelclass\groundwork.h(368): warning C4189: 'oo': local variable is initialized but not referenced
 e:\users\jahn\burnawitch\newlevelclass\groundwork.h(425): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 e:\users\jahn\burnawitch\newlevelclass\groundwork.h(497): warning C4552: '/': operator has no effect; expected operator with side-effect
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(184): warning C4100: 'lpParam': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(186): warning C4189: 'retSize': local variable is initialized but not referenced
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(575): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(187): warning C4100: 'lpParam': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(189): warning C4189: 'retSize': local variable is initialized but not referenced
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(580): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(577): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(582): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(609): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(609): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(609): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(609): warning C4100: 'fDoubleClick': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(609): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'fDoubleClick': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'ch': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(630): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(630): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(630): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(630): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(638): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(638): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(638): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(638): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(676): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(686): warning C4100: 'lpCreateStruct': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(686): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(691): warning C4100: 'id': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(614): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(614): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(614): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(614): warning C4100: 'fDoubleClick': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(614): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(621): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(621): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(621): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(621): warning C4100: 'fDoubleClick': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(621): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(628): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(628): warning C4100: 'ch': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(628): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(635): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(635): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(635): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(635): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(643): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(643): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(643): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(643): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(681): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(691): warning C4100: 'lpCreateStruct': unreferenced formal parameter
 e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(691): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(696): warning C4100: 'flags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(696): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(696): warning C4100: 'fDown': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(696): warning C4100: 'id': unreferenced formal parameter
 e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(696): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(715): warning C4100: 'flags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(715): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(715): warning C4100: 'fDown': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(715): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(815): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(833): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(701): warning C4100: 'flags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(701): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(701): warning C4100: 'fDown': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(701): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(720): warning C4100: 'flags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(720): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(720): warning C4100: 'fDown': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(720): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(820): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(838): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(906): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
   lecture 8_2010.vcxproj -> E:\Users\Jahn\BurnAWitch\newlevelclass\Debug\homework 4.exe
   lecture 8_2010.vcxproj -> E:\Users\Jahn\BurnAWitch\newlevelclass\Debug\homework 4.pdb (Full PDB)

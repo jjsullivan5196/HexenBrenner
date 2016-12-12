@@ -74,7 +74,7 @@ class GameHandler(RpcHandler):
             print('Player ' + str(self.state.fire_id) + ' has died!')
 
             nextVictim = random.choice(list(self.players.keys()))
-            while(nextVictim == self.state.fire_id):
+            while(nextVictim == self.state.fire_id or self.players[nextVictim].alive == False):
                 nextVictim = random.choice(list(self.players.keys()))
             self.state.fire_id = nextVictim
 

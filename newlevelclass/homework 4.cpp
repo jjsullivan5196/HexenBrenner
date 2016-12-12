@@ -6,6 +6,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
 #include "groundwork.h"
+#include "Font.h"
 
 
 //--------------------------------------------------------------------------------------
@@ -57,6 +58,8 @@ billboard							g_Model;
 char								g_Server[20] = "localhost";
 bool								g_Connected = true;
 HANDLE								g_mHandle;
+
+Font								g_Font;
 
 camera								cam;
 level								level1;
@@ -572,6 +575,8 @@ HRESULT InitDevice()
 
 	level1.make_big_level_object(g_pd3dDevice, &g_View, &g_Projection);
 
+	g_Font.init(g_pd3dDevice, g_pImmediateContext, g_Font.defaultFontMapDesc);
+
 	FILE* host = fopen("host.txt", "r");
 	if (host != NULL)
 		fscanf(host, "%s", g_Server);
@@ -850,10 +855,8 @@ UINT offset = 0;
     g_pImmediateContext->PSSetSamplers( 0, 1, &g_pSamplerLinear );
 
 	//g_pImmediateContext->OMSetDepthStencilState(ds_off, 1);
-   // g_pImmediateContext->Draw( 36, 0 );
 
-	//g_pImmediateContext->OMSetDepthStencilState(ds_on, 1);
-
+	//->OMSetDepthStencilState(ds_on, 1);
 
 	//render all the walls of the level
 	level1.render_level(g_pImmediateContext, &view, &g_Projection, g_pCBuffer);
@@ -873,6 +876,9 @@ UINT offset = 0;
 		PlayerInfo* c = &i->second;
 		//fprintf(stdout, "Receive: %.2f %.2f %.2f\n", c->x, c->y, c->z);
 
+		if (!c->connected)
+			continue;
+
 		g_Model.position = XMFLOAT3(c->x, c->y, c->z);
 		g_Model.scale = 1.0f;
 
@@ -884,12 +890,33 @@ UINT offset = 0;
 
 		g_pImmediateContext->Draw(12, 0);
 	}
-
 	//g_pImmediateContext->Draw(12, 0);
-
 
     //
     // Present our back buffer to our front buffer
     //
+
+	g_Font.setWindowSize(1920, 1080);
+	g_Font.setScaling(XMFLOAT3(2, 2, 1));
+	g_Font.setAnchorPoint(Font::Anchor::TOP_LEFT);
+	g_Font.setColor(XMFLOAT3(1, 0, 0));
+	g_Font.setPosition(XMFLOAT3(-1, 1, 0));
+
+	char buf[128];
+
+	switch(g_gameState.mode)
+	{
+		case MODE_LOBBY:
+			sprintf(buf, "WAITING FOR PLAYERS");
+			break;
+		case MODE_RUN:
+			sprintf(buf, "NEXT KILL: %d", g_gameState.timer);
+			break;
+		case MODE_OVER:
+			sprintf(buf, "PLAYER %d WINS!", g_gameState.fire_id);
+			break;
+	}
+
+	g_Font << buf;
     g_pSwapChain->Present( 0, 0 );
 }

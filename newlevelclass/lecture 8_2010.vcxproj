@@ -372,9 +372,9 @@
       </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup />
   <ItemGroup>
     <ClCompile Include="client.cpp" />
+    <ClCompile Include="Font.cpp" />
     <ClCompile Include="groundwork.cpp" />
     <ClCompile Include="homework 4.cpp" />
     <ClCompile Include="player.cpp" />
@@ -385,6 +385,7 @@
     <None Include="shader.fx" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Font.h" />
     <ClInclude Include="groundwork.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="socketsCommon.h" />
