@@ -579,7 +579,7 @@ HRESULT InitDevice()
 	g_Font.init(g_pd3dDevice, g_pImmediateContext, g_Font.defaultFontMapDesc);
 
 
-	OpenConsole();
+	//OpenConsole();
 	FILE* host = fopen("host.txt", "r");
 	if (host != NULL)
 		fscanf(host, "%s", g_Server);
