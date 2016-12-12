@@ -91,7 +91,7 @@ float4 PS( PS_INPUT input) : SV_Target
 	}
 	else
 	{
-		color = color * depth * 2.5;
+		color = color * depth * 8;
 	}
 
 	return color;

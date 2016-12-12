@@ -830,7 +830,7 @@ UINT offset = 0;
 
     // Update our time
     static float t = 0.0f;
-	t += 0.001;
+	t += 0.01;
 	
     // Clear the back buffer
     float ClearColor[4] = { 0.0f, 0.0f, 0.0f, 1.0f }; // red, green, blue, alpha
@@ -850,8 +850,6 @@ UINT offset = 0;
 
 	cam.animation(elapsed, &g_Player);
 	XMMATRIX view = cam.get_matrix(&g_View);
-
-	fprintf(stdout, "%.2f %.2f %.2f\n", cam.position.x, cam.position.y, cam.position.z);
 
     // Update skybox constant buffer
     ConstantBuffer constantbuffer;
@@ -901,7 +899,7 @@ UINT offset = 0;
 		constantbuffer.View = XMMatrixTranspose(view);
 		constantbuffer.Projection = XMMatrixTranspose(g_Projection);
 		constantbuffer.info.x = 0;
-		constantbuffer.info.y = t;
+		constantbuffer.info.y = max(1, sinf(t) * 255);
 
 		if (g_gameState.fire_id == c->id)
 		{
@@ -929,20 +927,20 @@ UINT offset = 0;
 	switch(g_gameState.mode)
 	{
 		case MODE_LOBBY:
-			sprintf(buf, "WAITING FOR PLAYERS\n");
+			sprintf(buf, "PLAYER: %d\nWAITING FOR PLAYERS\n", g_Player.id);
 			break;
 		case MODE_RUN:
 			if (g_Player.alive)
 			{
-				sprintf(buf, "NEXT KILL: %d\n%s\n", g_gameState.timer, (g_gameState.fire_id == g_Player.id ? "YOU ARE ON FIRE!" : ""));
+				sprintf(buf, "PLAYER: %d\nNEXT KILL: %d\n%s\n", g_Player.id, g_gameState.timer, (g_gameState.fire_id == g_Player.id ? "YOU ARE ON FIRE!" : ""));
 			}
 			else
 			{
-				sprintf(buf, "YOU ARE DEAD!\n");
+				sprintf(buf, "PLAYER: %d\nYOU ARE DEAD!\n", g_Player.id);
 			}
 			break;
 		case MODE_OVER:
-			sprintf(buf, "PLAYER %d WINS!\n", g_gameState.fire_id);
+			sprintf(buf, "PLAYER: %d\nPLAYER %d WINS!\n", g_Player.id, g_gameState.fire_id);
 			break;
 	}
 

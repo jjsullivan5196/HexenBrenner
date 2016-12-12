@@ -48,6 +48,17 @@ class GameHandler(RpcHandler):
 
 
         if(self.state.mode == GameState.MODE_OVER):
+            if(self.state.cooldown = None):
+                for key in self.players:
+                    mPlayer = self.players[key]
+                    if(mPlayer.connected == True):
+                        mPlayer.alive = True
+                self.state.playersAlive = self.state.numPlayers
+                self.state.cooldown = time.time() + GameHandler.TIME_LOBBY
+            elif(time.time() > self.state.cooldown):
+                self.state.cooldown = time.time() + 5
+                self.state.gametimer = time.time() + GameHandler.TIME_RESET
+                self.state.mode = GameHandler.MODE_RUN
             return
 
         if(self.state.numPlayers == 0):
@@ -58,6 +69,7 @@ class GameHandler(RpcHandler):
                 aPlayer = self.players[key]
                 if(aPlayer.alive == True):
                     print('Player ' + str(key) + ' wins!')
+                    self.state.cooldown = None
                     self.state.mode = GameState.MODE_OVER
             return
 
