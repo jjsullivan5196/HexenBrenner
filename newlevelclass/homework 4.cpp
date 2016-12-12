@@ -6,6 +6,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
 #include "groundwork.h"
+#include "music.h"
 #include "Font.h"
 
 
@@ -486,7 +487,7 @@ HRESULT InitDevice()
     if( FAILED( hr ) )
         return hr;
 
-	hr = D3DX11CreateShaderResourceViewFromFile(g_pd3dDevice, L"playb1.gif", NULL, NULL, &g_PlayerTex, NULL);
+	hr = D3DX11CreateShaderResourceViewFromFile(g_pd3dDevice, L"playb1.png", NULL, NULL, &g_PlayerTex, NULL);
 	if (FAILED(hr))
 		return hr;
 
@@ -584,6 +585,7 @@ HRESULT InitDevice()
 		fscanf(host, "%s", g_Server);
 	g_clientSocket = clientConnect(g_Server);
 	g_mHandle = CreateThread(NULL, NULL, handlePlayers, NULL, NULL, NULL);
+	start_music(L"forest.mp3");
 
     return S_OK;
 }
@@ -831,7 +833,7 @@ UINT offset = 0;
 	t += 0.001;
 	
     // Clear the back buffer
-    float ClearColor[4] = { 0.0f, 0.125f, 0.3f, 1.0f }; // red, green, blue, alpha
+    float ClearColor[4] = { 0.0f, 0.0f, 0.0f, 1.0f }; // red, green, blue, alpha
     g_pImmediateContext->ClearRenderTargetView( g_pRenderTargetView, ClearColor );
 
     // Clear the depth buffer to 1.0 (max depth)
@@ -898,6 +900,14 @@ UINT offset = 0;
 		constantbuffer.World = XMMatrixTranspose(worldmatrix);
 		constantbuffer.View = XMMatrixTranspose(view);
 		constantbuffer.Projection = XMMatrixTranspose(g_Projection);
+		constantbuffer.info.x = 0;
+		constantbuffer.info.y = t;
+
+		if (g_gameState.fire_id == c->id)
+		{
+			constantbuffer.info.x = 1;
+		}
+
 		g_pImmediateContext->UpdateSubresource(g_pCBuffer, 0, NULL, &constantbuffer, 0, 0);
 
 		g_pImmediateContext->Draw(12, 0);

@@ -26,6 +26,7 @@ struct ConstantBuffer
 	XMMATRIX World;
 	XMMATRIX View;
 	XMMATRIX Projection;
+	XMFLOAT3 info;
 	};
 
 
@@ -443,7 +444,7 @@ class level
 				position.x -= side.x * speed;
 				position.y -= side.y * speed;
 				position.z -= side.z * speed;
-			}
+			} 
 			if (a)
 			{
 				position.x += side.x * speed;

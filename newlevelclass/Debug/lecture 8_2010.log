@@ -93,21 +93,21 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(58): warning C4100: 'ViewMatrix': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(211): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(213): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(215): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(217): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(222): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(227): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(267): warning C4018: '>=': signed/unsigned mismatch
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(369): warning C4018: '<': signed/unsigned mismatch
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(374): warning C4239: nonstandard extension used: 'argument': conversion from '_XMMATRIX' to 'XMMATRIX &'
-  e:\users\jahn\burnawitch\newlevelclass\groundwork.h(374): note: A non-const reference may only be bound to an lvalue
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(302): warning C4100: 'projection': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(302): warning C4100: 'view': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(368): warning C4189: 'oo': local variable is initialized but not referenced
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(499): warning C4552: '/': operator has no effect; expected operator with side-effect
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(59): warning C4100: 'ViewMatrix': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(212): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(214): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(216): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(218): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(223): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(228): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(268): warning C4018: '>=': signed/unsigned mismatch
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(370): warning C4018: '<': signed/unsigned mismatch
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(375): warning C4239: nonstandard extension used: 'argument': conversion from '_XMMATRIX' to 'XMMATRIX &'
+  e:\users\jahn\burnawitch\newlevelclass\groundwork.h(375): note: A non-const reference may only be bound to an lvalue
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(303): warning C4100: 'projection': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(303): warning C4100: 'view': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(369): warning C4189: 'oo': local variable is initialized but not referenced
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(500): warning C4552: '/': operator has no effect; expected operator with side-effect
 e:\users\jahn\burnawitch\newlevelclass\groundwork.cpp(18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   homework 4.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': macro redefinition
@@ -204,71 +204,72 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: conversion from 'unsigned int' to 'INT' requires a narrowing conversion
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(58): warning C4100: 'ViewMatrix': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(211): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(213): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(215): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(217): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(222): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(227): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(267): warning C4018: '>=': signed/unsigned mismatch
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(369): warning C4018: '<': signed/unsigned mismatch
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(374): warning C4239: nonstandard extension used: 'argument': conversion from '_XMMATRIX' to 'XMMATRIX &'
-  e:\users\jahn\burnawitch\newlevelclass\groundwork.h(374): note: A non-const reference may only be bound to an lvalue
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(302): warning C4100: 'projection': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(302): warning C4100: 'view': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(368): warning C4189: 'oo': local variable is initialized but not referenced
-e:\users\jahn\burnawitch\newlevelclass\groundwork.h(499): warning C4552: '/': operator has no effect; expected operator with side-effect
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(187): warning C4100: 'lpParam': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(189): warning C4189: 'retSize': local variable is initialized but not referenced
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(582): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(59): warning C4100: 'ViewMatrix': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(212): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(214): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(216): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(218): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(223): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(228): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(268): warning C4018: '>=': signed/unsigned mismatch
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(370): warning C4018: '<': signed/unsigned mismatch
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(375): warning C4239: nonstandard extension used: 'argument': conversion from '_XMMATRIX' to 'XMMATRIX &'
+  e:\users\jahn\burnawitch\newlevelclass\groundwork.h(375): note: A non-const reference may only be bound to an lvalue
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(303): warning C4100: 'projection': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(303): warning C4100: 'view': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(369): warning C4189: 'oo': local variable is initialized but not referenced
+e:\users\jahn\burnawitch\newlevelclass\groundwork.h(500): warning C4552: '/': operator has no effect; expected operator with side-effect
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(188): warning C4100: 'lpParam': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(190): warning C4189: 'retSize': local variable is initialized but not referenced
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(583): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(584): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(585): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: see declaration of 'fscanf'
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'fDoubleClick': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(616): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'fDoubleClick': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(623): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(630): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(630): warning C4100: 'ch': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(630): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(637): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(637): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(637): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(637): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(645): warning C4100: 'keyFlags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(645): warning C4100: 'y': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(645): warning C4100: 'x': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(645): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(683): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(693): warning C4100: 'lpCreateStruct': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(693): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(698): warning C4100: 'id': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(698): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(703): warning C4100: 'flags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(703): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(703): warning C4100: 'fDown': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(703): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(722): warning C4100: 'flags': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(722): warning C4100: 'cRepeat': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(722): warning C4100: 'fDown': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(722): warning C4100: 'hwnd': unreferenced formal parameter
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(822): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(849): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(922): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(618): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(618): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(618): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(618): warning C4100: 'fDoubleClick': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(618): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(625): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(625): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(625): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(625): warning C4100: 'fDoubleClick': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(625): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(632): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(632): warning C4100: 'ch': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(632): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(639): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(639): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(639): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(639): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(647): warning C4100: 'keyFlags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(647): warning C4100: 'y': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(647): warning C4100: 'x': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(647): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(685): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(695): warning C4100: 'lpCreateStruct': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(695): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(700): warning C4100: 'id': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(700): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(705): warning C4100: 'flags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(705): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(705): warning C4100: 'fDown': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(705): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(724): warning C4100: 'flags': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(724): warning C4100: 'cRepeat': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(724): warning C4100: 'fDown': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(724): warning C4100: 'hwnd': unreferenced formal parameter
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(824): warning C4244: 'initializing': conversion from 'long double' to 'long', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(851): warning C4244: 'argument': conversion from 'long' to 'float', possible loss of data
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(932): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(927): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(937): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(931): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(941): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(935): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+e:\users\jahn\burnawitch\newlevelclass\homework 4.cpp(945): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
   Generating Code...
+e:\users\jahn\burnawitch\newlevelclass\music.h(79): warning C4715: 'run_mp3_thread': not all control paths return a value
   lecture 8_2010.vcxproj -> E:\Users\Jahn\BurnAWitch\newlevelclass\Debug\homework 4.exe
   lecture 8_2010.vcxproj -> E:\Users\Jahn\BurnAWitch\newlevelclass\Debug\homework 4.pdb (Full PDB)

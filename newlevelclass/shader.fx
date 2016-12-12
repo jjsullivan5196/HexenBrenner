@@ -17,6 +17,7 @@ cbuffer ConstantBuffer : register( b0 )
 matrix World;
 matrix View;
 matrix Projection;
+float3 info;
 };
 
 //--------------------------------------------------------------------------------------
@@ -67,7 +68,10 @@ float4 PSlevel(PS_INPUT input) : SV_Target
 {
 	float4 color = tx.Sample(samLinear, input.Tex.xy);
 	float depth = saturate(input.Pos.z / input.Pos.w);
-	return color;
+
+	//depth = pow(depth, 0.97);
+	//color = (depth*0.9 + 0.02);
+	return color * depth * 2.5;
 }
 
 //--------------------------------------------------------------------------------------
@@ -77,12 +81,19 @@ float4 PS( PS_INPUT input) : SV_Target
 {
     float4 color = txDiffuse.Sample( samLinear, input.Tex );
 	float depth = saturate(input.Pos.z / input.Pos.w);
-
-	if (color.b >= 1 && color.g >= 1 && color.r <= 1)
-	{
-		color.a = 0;
-	}
 	//depth = pow(depth,0.97);
 	//color = depth;// (depth*0.9 + 0.02);
+
+	if (info.x >= 1)
+	{
+		color.r *= info.y;
+		color = color * depth * 12;
+	}
+	else
+	{
+		color = color * depth * 2.5;
+	}
+	
+
 	return color;
 }

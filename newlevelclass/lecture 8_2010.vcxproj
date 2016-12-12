@@ -387,6 +387,7 @@
   <ItemGroup>
     <ClInclude Include="Font.h" />
     <ClInclude Include="groundwork.h" />
+    <ClInclude Include="music.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="socketsCommon.h" />
     <ResourceCompile Include="homework 8.rc" />
