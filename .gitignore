@@ -3,3 +3,4 @@
 *.user
 *~
 *.swp
+*__pycache__*
