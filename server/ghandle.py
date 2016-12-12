@@ -10,7 +10,7 @@ class GameHandler(RpcHandler):
     HEAD_GETSTATE = 2
     HEAD_GETPLAYERS = 3
     HEAD_PUSHPLAYER = 4
-    TIME_RESET = 10
+    TIME_RESET = 15
     TIME_LOBBY = 20
 
     def __init__(self):
