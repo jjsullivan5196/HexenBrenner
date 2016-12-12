@@ -65,7 +65,7 @@ class GameHandler(RpcHandler):
             if(mPlayer.dist(*nPlayer.pos()) < 2 and time.time() > self.state.cooldown):
                 self.state.fire_id = nKey
                 self.state.cooldown = time.time() + 5
-                self.state.gametimer = time.time() + GameHanlder.TIME_RESET
+                self.state.gametimer = time.time() + GameHandler.TIME_RESET
                 print('Player ' + str(nKey) + ' is on fire!')
                 break
 
