@@ -1,4 +1,5 @@
 import struct
+from math import *
 from rpc import *
 
 class GameState(NetObject):
