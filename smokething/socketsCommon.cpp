@@ -61,6 +61,7 @@ void updateGameState(GameState* gState, const SOCKET socket)
 
 void sendPlayer(const PlayerInfo* player, const SOCKET socket)
 {
+	//fprintf(stdout, "Send: %.2f %.2f %.2f\n", player->x, player->y, player->z);
 	void* ack = rpcCall(socket, HEAD_PUSHPLAYER, player, sizeof(PlayerInfo), NULL);
 	free(ack);
 }
@@ -78,11 +79,12 @@ void updatePlayers(PlayerMap& players, BYTE mId, const SOCKET socket) {
 	for (int i = 0; i < (retSize / sizeof(PlayerInfo)); i++)
 	{
 		PlayerInfo* n = &update[i];
-		if (n->id != mId)
-		{
-			PlayerInfo* set = &players[n->id];
-			memcpy(set, n, sizeof(PlayerInfo));
-		}
+
+		if (n->id == mId)
+			continue;
+
+		PlayerInfo* set = &players[n->id];
+		memcpy(set, n, sizeof(PlayerInfo));
 	}
 	free(update);
 }

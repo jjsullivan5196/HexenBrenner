@@ -11,6 +11,7 @@ def clientHandler():
     while True:
         try:
             gameManager.handleMessages()
+            gameManager.gameLogic()
         except OSError as e:
             print(e)
 

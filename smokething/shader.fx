@@ -57,8 +57,6 @@ float4 PS( PS_INPUT input) : SV_Target
 {
     float4 color = txDiffuse.Sample( samLinear, input.Tex );
 	float depth = saturate(input.Pos.z / input.Pos.w);
-	//depth = pow(depth,0.97);
-	//color = depth;// (depth*0.9 + 0.02);
 	color.a = info.x;
 	return color;
 }

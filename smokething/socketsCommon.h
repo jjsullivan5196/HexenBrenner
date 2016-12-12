@@ -20,6 +20,10 @@ const BYTE HEAD_GETSTATE = 2;
 const BYTE HEAD_GETPLAYERS = 3;
 const BYTE HEAD_PUSHPLAYER = 4;
 
+const BYTE MODE_LOBBY = 1;
+const BYTE MODE_RUN = 2;
+const BYTE MODE_OVER = 3;
+
 // Serverside
 SOCKET getListenSocket(); // Setup listener socket
 SOCKET getClientSocket(SOCKET ListenSocket); // Get client connection
@@ -38,6 +42,8 @@ typedef struct {
 
 typedef struct {
 	BYTE numPlayers;
+	BYTE playersAlive;
+	BYTE mode;
 	BYTE fire_id;
 	BYTE timer;
 } GameState;

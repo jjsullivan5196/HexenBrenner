@@ -189,7 +189,6 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 
 	//Just Connected
 	connectPlayer(&g_Player, g_clientSocket);
-	g_Players[g_Player.id] = g_Player;
 
 	//Forever
 	while (g_Connected)
@@ -202,7 +201,7 @@ DWORD WINAPI handlePlayers(LPVOID lpParam)
 
 		//Get players
 		updatePlayers(g_Players, g_Player.id, g_clientSocket);
-		fprintf(stdout, "Roundtrip completed\n");
+		//fprintf(stdout, "Roundtrip completed\n");
 	}
 
 	//Send disconnect message
@@ -551,8 +550,8 @@ HRESULT InitDevice()
     g_World = XMMatrixIdentity();
 
     // Initialize the view matrix
-    XMVECTOR Eye = XMVectorSet( 0.0f, 0.0f, -6.0f, 0.0f );//camera position
-    XMVECTOR At = XMVectorSet( 0.0f, 0.0f, 0.0f, 0.0f );//look at
+    XMVECTOR Eye = XMVectorSet( 0.0f, 0.0f, 0.0f, 0.0f );//camera position
+    XMVECTOR At = XMVectorSet( 0.0f, 0.0f, 1.0f, 0.0f );//look at
     XMVECTOR Up = XMVectorSet( 0.0f, 1.0f, 0.0f, 0.0f );// normal vector on at vector (always up)
     g_View = XMMatrixLookAtLH( Eye, At, Up );
 
@@ -935,12 +934,9 @@ UINT offset = 0;
 	for (PlayerMap::iterator i = g_Players.begin(); i != g_Players.end(); i++)
 	{
 		PlayerInfo* c = &i->second;
+		//fprintf(stdout, "Receive: %.2f %.2f %.2f\n", c->x, c->y, c->z);
 
-		if (c->id == g_Player.id)
-			continue;
-
-		XMFLOAT3 position = XMFLOAT3(c->x, c->y, c->z);
-		g_Model.position = position;
+		g_Model.position = XMFLOAT3(c->x, c->y, c->z);
 		g_Model.scale = 1.0f;
 
 		worldmatrix = g_Model.get_matrix(view);

@@ -370,38 +370,39 @@ class level
 					position.y += forward.y * speed;
 					position.z += forward.z * speed;
 					}
-				/*if (d)
+				if (d)
 					{
-					position.x -= side.x * 0.01;
-					position.y -= side.y * 0.01;
-					position.z -= side.z * 0.01;
+					position.x -= side.x * speed;
+					position.y -= side.y * speed;
+					position.z -= side.z * speed;
 					}
 				if (a)
 					{
-					position.x += side.x * 0.01;
-					position.y += side.y * 0.01;
-					position.z += side.z * 0.01;
+					position.x += side.x * speed;
+					position.y += side.y * speed;
+					position.z += side.z * speed;
 					}
-					*/
+				/*
 				if (d)
 					{
-					rotation.y-=0.0005;
+					rotation.y -=0.0005;
 					}
 				if (a)
 					{
 					rotation.y += 0.0005;
 					}
-
-				p->x = position.x;
-				p->y = position.y;
-				p->z = position.z;
+					*/
+				p->x = -position.x;
+				p->y = -position.y;
+				p->z = -position.z;
 				}
 			XMMATRIX get_matrix(XMMATRIX *view)
 				{
-				XMMATRIX R, T;
+				XMMATRIX R, T, W;
 				R = XMMatrixRotationY(rotation.y);
 				T = XMMatrixTranslation(position.x, position.y, position.z);
-				return T*(*view)*R;
+				W = T*(*view)*R;
+				return W;
 				}
 		};
 
