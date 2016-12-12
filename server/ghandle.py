@@ -48,7 +48,7 @@ class GameHandler(RpcHandler):
 
 
         if(self.state.mode == GameState.MODE_OVER):
-            if(self.state.cooldown = None):
+            if(self.state.cooldown == None):
                 for key in self.players:
                     mPlayer = self.players[key]
                     if(mPlayer.connected == True):
