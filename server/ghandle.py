@@ -44,6 +44,7 @@ class GameHandler(RpcHandler):
                     self.state.cooldown = time.time() + 5
                     self.state.gametimer = time.time() + GameHandler.TIME_RESET
                     self.state.mode = GameState.MODE_RUN
+                return
 
 
         if(self.state.mode == GameState.MODE_OVER):
