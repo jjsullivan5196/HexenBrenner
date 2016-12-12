@@ -577,6 +577,8 @@ HRESULT InitDevice()
 
 	g_Font.init(g_pd3dDevice, g_pImmediateContext, g_Font.defaultFontMapDesc);
 
+
+	OpenConsole();
 	FILE* host = fopen("host.txt", "r");
 	if (host != NULL)
 		fscanf(host, "%s", g_Server);
@@ -847,6 +849,7 @@ UINT offset = 0;
 	cam.animation(elapsed, &g_Player);
 	XMMATRIX view = cam.get_matrix(&g_View);
 
+	fprintf(stdout, "%.2f %.2f %.2f\n", cam.position.x, cam.position.y, cam.position.z);
 
     // Update skybox constant buffer
     ConstantBuffer constantbuffer;
@@ -885,7 +888,7 @@ UINT offset = 0;
 		PlayerInfo* c = &i->second;
 		//fprintf(stdout, "Receive: %.2f %.2f %.2f\n", c->x, c->y, c->z);
 
-		if (!c->connected)
+		if (!c->connected || !c->alive)
 			continue;
 
 		g_Model.position = XMFLOAT3(c->x, c->y, c->z);

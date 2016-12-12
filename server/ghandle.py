@@ -60,6 +60,9 @@ class GameHandler(RpcHandler):
                 continue
             nPlayer = self.players[nKey]
 
+            if(nPlayer.alive == False or nPlayer.connected == False):
+                continue
+
             #print(str(mPlayer.dist(*nPlayer.pos())))
 
             if(mPlayer.dist(*nPlayer.pos()) < 2 and time.time() > self.state.cooldown):
@@ -75,7 +78,7 @@ class GameHandler(RpcHandler):
             print('Player ' + str(self.state.fire_id) + ' has died!')
 
             nextVictim = random.choice(list(self.players.keys()))
-            while(nextVictim == self.state.fire_id or self.players[nextVictim].alive == False):
+            while(nextVictim == self.state.fire_id or self.players[nextVictim].alive == False or self.players[nextVictim].connected == False):
                 nextVictim = random.choice(list(self.players.keys()))
             self.state.fire_id = nextVictim
 

@@ -414,6 +414,7 @@ class level
 			XMMATRIX R, T;
 			R = XMMatrixRotationY(-rotation.y);
 
+			XMFLOAT3 oldpos = position;
 			XMFLOAT3 forward = XMFLOAT3(0, 0, 1);
 			XMVECTOR f = XMLoadFloat3(&forward);
 			f = XMVector3TransformCoord(f, R);
@@ -449,16 +450,16 @@ class level
 				position.y += side.y * speed;
 				position.z += side.z * speed;
 			}
-			/*
-			if (d)
+
+			if (position.x < -49 || position.x > 64.5)
 			{
-			rotation.y -=0.0005;
+				position.x = oldpos.x;
 			}
-			if (a)
+			if (position.z > -19 || position.z < -133)
 			{
-			rotation.y += 0.0005;
+				position.z = oldpos.z;
 			}
-			*/
+
 			p->x = -position.x;
 			p->y = -position.y;
 			p->z = -position.z;
